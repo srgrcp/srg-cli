@@ -1,4 +1,5 @@
 import * as fs from 'fs'
+import { IAngularJson, Projects } from 'src/interfaces/iAngularJson'
 
 export class AngularJson {
     private _angularJsonPath: string = './angular.json'
