@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { ParamsGetter } from './utils/params.getter';
+import { ParamsGetter } from './utils/paramsGetter';
 import { AngularJson } from './utils/angularJson';
 import { CommandHandler } from './utils/commandHandler';
 

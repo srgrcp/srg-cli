@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "srg-cli Configuration",
+    "type": "object",
+    "properties": {
+        "applicationsRoot": {
+            "type": "string",
+            "default": "apps"
+        },
+        "microAppsRoot": {
+            "type": "string",
+            "default": "micro-apps"
+        },
+        "librariesRoot": {
+            "type": "string",
+            "default": "libs"
+        }
+    }
+}

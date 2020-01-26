@@ -1,3 +1,6 @@
 {
-    "test": "asd"
+    "$schema": "./schema.json",
+    "applicationsRoot": "apps",
+    "microAppsRoot": "micro-apps",
+    "librariesRoot": "libs"
 }
