@@ -15,5 +15,6 @@
             "type": "string",
             "default": "libs"
         }
-    }
+    },
+    "required": [ "applicationsRoot", "microAppsRoot", "librariesRoot" ]
 }

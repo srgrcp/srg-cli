@@ -4,6 +4,8 @@ import 'colors'
 
 /**
  * Get command and options.
+ * @todo applicationsRoot, microAppsRoot, librariesRoot
+ * @todo declare interface properties first
  */
 export class ParamsGetter implements IParams {
 
