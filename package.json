@@ -1,0 +1,35 @@
+{
+  "name": "srg-cli",
+  "version": "1.0.0",
+  "description": "CLI Tool to create and implement Angular web-components.",
+  "main": "index.js",
+  "bin": {
+    "srg": "./dist/out-tsc/main.js"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "watch": "tsc -b -w",
+    "start": "npm run build && node ./dist/out-tsc/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srgrcp/srg-cli.git"
+  },
+  "keywords": [
+    "Angular",
+    "CLI",
+    "Micro-apps",
+    "Micro-services",
+    "Web-components"
+  ],
+  "author": "srgrcp",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/srgrcp/srg-cli/issues"
+  },
+  "homepage": "https://github.com/srgrcp/srg-cli#readme",
+  "dependencies": {
+    "@types/node": "^13.5.0",
+    "colors": "^1.4.0"
+  }
+}
