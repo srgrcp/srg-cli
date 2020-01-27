@@ -1,5 +1,5 @@
 export interface IParams {
     Command: string
-    AngularJson: string
+    AngularJsonPath: string
     ClearRepository: Boolean
 }

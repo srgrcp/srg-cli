@@ -24,9 +24,10 @@ export class ParamValueGetter {
     /**
      * @todo Type validation
      */
-    private requiredValidation = <T>(): T => {
+    private requiredValidation = <T>(): T | undefined => {
         if (this.required) {
             this.sendMissedMessage()
+            return undefined
         } else {
             this.paramList.shift()
             return true as unknown as T
@@ -35,12 +36,12 @@ export class ParamValueGetter {
 
     public GetValue = <T>(): T => {
         if (!this.value) {
-            return this.requiredValidation<T>()
+            return this.requiredValidation<T>()!
         } else if (!this.value.startsWith('-')){
             this.paramList.splice(0, 2)
             return this.value as unknown as T
         } else {
-            return this.requiredValidation<T>()
+            return this.requiredValidation<T>()!
         }
     }
 }

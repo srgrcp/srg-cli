@@ -10,7 +10,7 @@ import 'colors'
 export class ParamsGetter implements IParams {
 
     // Options
-    private command: string
+    private command: string | undefined
     private angularJson: string = './angular.json'
     private clearRepository: Boolean = false
 
@@ -23,7 +23,13 @@ export class ParamsGetter implements IParams {
     }
 
     // Options
-    get Command(): string { return this.command }
+    get Command(): string {
+        if (!this.command) {
+            console.error('Error:'.red, 'A command is required.')
+            process.exit(0)
+        }
+        return this.command
+    }
     /**
      * CLI option to set angular.json path.
      * @description option: --angular-json,
@@ -31,7 +37,7 @@ export class ParamsGetter implements IParams {
      * @default './angular.json'
      * @example srg init --angular-json './angular.json'
      */
-    get AngularJson(): string { return this.angularJson }
+    get AngularJsonPath(): string { return this.angularJson }
     /**
      * Cleans all existing projects of repository.
      */
